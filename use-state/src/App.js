@@ -36,7 +36,7 @@ function App() {
 
 	return (
 		<div className="app">
-			<h1>React Hooks</h1>
+			<h1>useState</h1>
 			<TodoForm onSubmit={handleTodoFormSubmit} />
 
 			<TodoList todos={todoList} onTodoClick={handleTodoClick} />
