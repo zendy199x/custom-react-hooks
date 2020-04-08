@@ -3,6 +3,7 @@ import "./App.scss"
 import queryString from "query-string"
 import PostList from "./components/PostList"
 import Pagination from "./components/Pagination"
+import PostFilterForm from "./components/PostFilterForm"
 
 function App() {
 	const [postList, setPostList] = useState([])
@@ -44,7 +45,16 @@ function App() {
 		console.log(`New page: `, newPage)
 		setFilters({
 			...filters,
-			_page: newPage
+			_page: newPage,
+		})
+	}
+
+	function handleFiltersChange(newFilters) {
+		console.log(`New filters: `, newFilters)
+		setFilters({
+			...filters,
+			_page: 1,
+			title_like: newFilters.searchTerm,
 		})
 	}
 
@@ -52,6 +62,7 @@ function App() {
 		<div className="app">
 			<h1>useEffect</h1>
 
+			<PostFilterForm onSubmit={handleFiltersChange} />
 			<PostList posts={postList} />
 			<Pagination pagination={panigation} onPageChange={handlePageChange} />
 		</div>
