@@ -4,6 +4,7 @@ import queryString from "query-string"
 import PostList from "./components/PostList"
 import Pagination from "./components/Pagination"
 import PostFilterForm from "./components/PostFilterForm"
+import Clock from "./components/Clock"
 
 function App() {
 	const [postList, setPostList] = useState([])
@@ -16,6 +17,8 @@ function App() {
 		_limit: 10,
 		_page: 1,
 	})
+
+	const [showClock, setShowClock] = useState(true)
 
 	useEffect(() => {
 		async function fetchPostList() {
@@ -61,6 +64,9 @@ function App() {
 	return (
 		<div className="app">
 			<h1>useEffect</h1>
+
+			{showClock && <Clock />}
+			<button onClick={() => setShowClock(false)}>HideClock</button>
 
 			<PostFilterForm onSubmit={handleFiltersChange} />
 			<PostList posts={postList} />
