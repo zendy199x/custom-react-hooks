@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "./App.scss"
 import Clock from "./components/Clock"
 import BetterClock from "./components/BetterClock"
+import MagicBox from './components/MagicBox'
 
 function App() {
 	const [showClock, setShowClock] = useState(true)
@@ -12,6 +13,7 @@ function App() {
 			{showClock && <Clock />}
 			<BetterClock />
 			<button onClick={() => setShowClock(false)}>HideClock</button>
+			<MagicBox />
 		</div>
 	)
 }

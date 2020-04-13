@@ -1,0 +1,10 @@
+.magic-box {
+    $box-size: 200px;
+
+    display: block;
+    width: $box-size;
+    height: $box-size;
+    border-radius: 8px;
+
+    transition: all 0.35s ease-in-out 0s;
+}
