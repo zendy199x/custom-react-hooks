@@ -7,15 +7,15 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "bootstrap": "^4.4.1",
-    "formik": "^2.1.5",
+    "bootstrap": "^4.5.2",
+    "formik": "^2.1.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-select": "^3.1.0",
-    "reactstrap": "^8.4.1",
+    "reactstrap": "^8.6.0",
     "yup": "^0.29.3"
   },
   "scripts": {
